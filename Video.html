@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {margin:0; background-image:url("Video1.jpg"); background-repeat:no-repeat; background-attachment:fixed; background-position: 60% 10%; background-color: black;}
+</style>
+    
+    <link rel="stylesheet" href="stil.css" type="text/css" css="cssLink" id="cssLink" />
+
+        <script type="text/javascript"> 
+
+     // No need to wait for document to load
+     // $(document).ready(function() {
+
+        //  css file based on the device
+        var controlCss;
+        //  get the device agent and conver to lover case
+        var deviceAgent = navigator.userAgent.toLowerCase();
+
+       if(deviceAgent.match(/android/i)){
+                        controlCss = "android.css";
+                        // use a solution that does not need jQuery
+                        document.getElementById("cssLink").setAttribute("href", controlCss);
+                    }
+
+        // etc..
+
+    // }); 
+</script>
+</head>
+<body>
+<script type="text/javascript">
+/////////////////////////////////////////////////////////
+// Javascript made by http://peters1.dk/tools/snow.php //
+/////////////////////////////////////////////////////////
+
+// ȚINE MINTE: Pentru a schimba calea unde snow.png este salvat...
+snow_img ="snow.png"
+
+// ÎN PLUS: Poţi edita cu usurinţă numărul de fulgi doriţi pe fiecare pagină...
+snow_no = 15;
+
+if (typeof(window.pageYOffset) == "number")
+{
+	snow_browser_width = window.innerWidth;
+	snow_browser_height = window.innerHeight;
+} 
+else if (document.body && (document.body.scrollLeft || document.body.scrollTop))
+{
+	snow_browser_width = document.body.offsetWidth;
+	snow_browser_height = document.body.offsetHeight;
+}
+else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop))
+{
+	snow_browser_width = document.documentElement.offsetWidth;
+	snow_browser_height = document.documentElement.offsetHeight;
+}
+else
+{
+	snow_browser_width = 500;
+	snow_browser_height = 500;	
+}
+
+snow_dx = [];
+snow_xp = [];
+snow_yp = [];
+snow_am = [];
+snow_stx = [];
+snow_sty = [];
+
+for (i = 0; i < snow_no; i++) 
+{ 
+	snow_dx[i] = 0; 
+	snow_xp[i] = Math.random()*(snow_browser_width-50);
+	snow_yp[i] = Math.random()*snow_browser_height;
+	snow_am[i] = Math.random()*20; 
+	snow_stx[i] = 0.02 + Math.random()/10;
+	snow_sty[i] = 0.7 + Math.random();
+	if (i > 0) document.write("<\div id=\"snow_flake"+ i +"\" style=\"position:absolute;z-index:"+i+"\"><\img src=\""+snow_img+"\" border=\"0\"><\/div>"); else document.write("<\div id=\"snow_flake0\" style=\"position:absolute;z-index:0\"><a href=\"http://peters1.dk/tools/snow.php\" target=\"_blank\"><\img src=\""+snow_img+"\" border=\"0\"></a><\/div>");
+}
+
+function SnowStart() 
+{ 
+	for (i = 0; i < snow_no; i++) 
+	{ 
+		snow_yp[i] += snow_sty[i];
+		if (snow_yp[i] > snow_browser_height-50) 
+		{
+			snow_xp[i] = Math.random()*(snow_browser_width-snow_am[i]-30);
+			snow_yp[i] = 0;
+			snow_stx[i] = 0.02 + Math.random()/10;
+			snow_sty[i] = 0.7 + Math.random();
+		}
+		snow_dx[i] += snow_stx[i];
+		document.getElementById("snow_flake"+i).style.top=snow_yp[i]+"px";
+		document.getElementById("snow_flake"+i).style.left=snow_xp[i] + snow_am[i]*Math.sin(snow_dx[i])+"px";
+	}
+	snow_time = setTimeout("SnowStart()", 10);
+}
+SnowStart();
+</script>
+<ul>
+  <li> <a class="nume" href="index.html" text-color="blue"> Dorian Gotonoaga</a></li>
+  <li><a href="index.html">Acasă</a></li>
+  <li><a href="2.html">Orientare profesională</a></li>
+  <li class="dropdown">
+    <a class="active" href="#" class="dropbtn">Topuri</a>
+    <div class="dropdown-content">
+      <a href="Music.html">Music</a>
+      <a class="active1" href="#">Video</a>
+      <a href="#">Filme</a>
+    </div>
+      <li class="stinga"><a href="3.html">Contact</a></li>
+  <li class="stinga"><a href="Despre.html">Despre</a></li>
+</ul>
+
+<div class="mijlociu">
+<br><br>
+<h1 align="center">Video</h1>
+    
+  <div class="video" align="center" style="color:red; font-size:20px; background-color: lightblue; margin: auto; border: 3px solid #73AD21; padding: 10px;">
+      Ştiu cât de mult vă plac topurile şi mai ştiu cât de mult vă place să vă contraziceţi pe tema <i>„aia e mai bună”</i>, dar aici eu mi-am ales cele mai ascultate melodii <i>(din playlistul personal)</i> ale anului 2016. Şi vorbesc aici doar de melodiile cu videoclip, că mai sunt şi cele fără. Ştiu că 2016 mai are câteva zile, dar marea majoritate a melodiilor ce urmează sunt cu temă de Crăciun, şi nu sunt deloc mare fan al acelora. Oricum deja mi-am ales topul, aşa că hai să trecem la vizionare şi ascultare.
+    </div> 
+    <br>
+<div align="center">
+    <iframe class="video"  src="https://www.youtube.com/embed/K9HO23XjfZc" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe class="video" src="https://www.youtube.com/embed/PK0uTzr7kKQ" frameborder="0" allowfullscreen></iframe>
+   <br>
+    <iframe class="video" src="https://www.youtube.com/embed/IirJSBWqwN0" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe class="video" src="https://www.youtube.com/embed/dl7A343kgoU" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe class="video" src="https://www.youtube.com/embed/papuvlVeZg8" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe class="video" src="https://www.youtube.com/embed/1VYJ3UQCmtM" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe class="video" src="https://www.youtube.com/embed/f3Xtp4qDEU8" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe class="video" src="https://www.youtube.com/embed/yUl0U7n0RoY" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe class="video" src="https://www.youtube.com/embed/OymuSfOHh34" frameborder="0" allowfullscreen></iframe>
+    <br>
+    <iframe class="video"  src="https://www.youtube.com/embed/sRAvQVf33Xo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+<footer id="desktop">&copy;Dorian Goțonoaga</footer>
+</body>
+</html>
