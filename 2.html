@@ -23,7 +23,12 @@
                         // use a solution that does not need jQuery
                         document.getElementById("cssLink").setAttribute("href", controlCss);
                     }
-
+		
+	 if(deviceAgent.match(/iPhone|iPad|iPod/i)){
+                        controlCss = "android.css";
+                        // use a solution that does not need jQuery
+                        document.getElementById("cssLink").setAttribute("href", controlCss);
+                    }
         // etc..
 
     // }); 
