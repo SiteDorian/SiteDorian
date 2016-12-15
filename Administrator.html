@@ -54,7 +54,28 @@ p{
     }
      p,ol{color:aliceblue;}
 </style>
-	<link rel="stylesheet" href="" type="text/css" css="cssLink" id="cssLink" />
+	     <link rel="stylesheet" href="" type="text/css" css="cssLink" id="cssLink" />
+
+        <script type="text/javascript"> 
+
+     // No need to wait for document to load
+     // $(document).ready(function() {
+
+        //  css file based on the device
+        var controlCss;
+        //  get the device agent and conver to lover case
+        var deviceAgent = navigator.userAgent.toLowerCase();
+
+       if(deviceAgent.match(/android/i)){
+                        controlCss = "android_orientare.css";
+                        // use a solution that does not need jQuery
+                        document.getElementById("cssLink").setAttribute("href", controlCss);
+                    }
+
+        // etc..
+
+         // }); 
+    </script>
 </head>
 <body>
 
